@@ -9,18 +9,32 @@
 import UIKit
 import CoreLocation
 
-class GetUserLocationViewController: UIViewController {
+class GetUserLocationViewController: UIViewController, CLLocationManagerDelegate {
     
-    
+    var manager: CLLocationManager!
     
 
     @IBAction func getLocation(_ sender: Any) {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+        manager = CLLocationManager()
+        manager.delegate = self
+        manager.desiredAccuracy = kCLLocationAccuracyBest
+        manager.requestAlwaysAuthorization()
+        
+        // tell the manager to get the person's location
+        manager.startUpdatingLocation()
+        
 
         // Do any additional setup after loading the view.
     }
+    
+    func locationManager(_ manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        print("new loc")
+    }
+    
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
