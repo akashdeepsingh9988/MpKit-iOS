@@ -16,14 +16,27 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //let x = CLLocation()
-         let x = CLLocationCoordinate2DMake(40.4168, -3.7038)
-        let y = MKCoordinateSpan(latitudeDelta: 1.5,longitudeDelta: 1.5)
+         let x = CLLocationCoordinate2DMake(43.6532, -79.3849)
+        let y = MKCoordinateSpan(latitudeDelta: 0.5,longitudeDelta: 0.5)
         let z = MKCoordinateRegionMake(x, y)
         self.mpKit.setRegion(z, animated: true)
         
         
         // example 2
         // add pin
+        
+        let annotation = MKPointAnnotation()
+        //annotation.coordinate = CLLocationCoordinate2D(latitude: 11.12, longitude: 12.11)
+        annotation.coordinate = x
+        annotation.title = "Toronto"
+        mpKit.addAnnotation(annotation)
+        
+        // 2nd pin
+        let pin2 = MKPointAnnotation()
+
+        pin2.coordinate = CLLocationCoordinate2DMake(43.683334, -79.766670)
+        pin2.title = "Brampton City"
+        mpKit.addAnnotation(pin2)
         
         
         
