@@ -14,6 +14,7 @@
 		9B54F7252199F4D6004634BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9B54F7232199F4D6004634BF /* LaunchScreen.storyboard */; };
 		9B54F7302199F4D6004634BF /* MpKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B54F72F2199F4D6004634BF /* MpKitTests.swift */; };
 		9B54F73B2199F4D6004634BF /* MpKitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B54F73A2199F4D6004634BF /* MpKitUITests.swift */; };
+		9B9FCAA1219B1750006A1722 /* GetUserLocationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B9FCAA0219B1750006A1722 /* GetUserLocationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		9B54F7362199F4D6004634BF /* MpKitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MpKitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B54F73A2199F4D6004634BF /* MpKitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MpKitUITests.swift; sourceTree = "<group>"; };
 		9B54F73C2199F4D6004634BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9B9FCAA0219B1750006A1722 /* GetUserLocationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserLocationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				9B54F7212199F4D6004634BF /* Assets.xcassets */,
 				9B54F7232199F4D6004634BF /* LaunchScreen.storyboard */,
 				9B54F7262199F4D6004634BF /* Info.plist */,
+				9B9FCAA0219B1750006A1722 /* GetUserLocationViewController.swift */,
 			);
 			path = MpKit;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9B9FCAA1219B1750006A1722 /* GetUserLocationViewController.swift in Sources */,
 				9B54F71D2199F4CB004634BF /* ViewController.swift in Sources */,
 				9B54F71B2199F4CB004634BF /* AppDelegate.swift in Sources */,
 			);

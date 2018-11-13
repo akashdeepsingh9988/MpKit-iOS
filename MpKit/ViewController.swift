@@ -10,14 +10,34 @@ import UIKit
 import MapKit
 
 class ViewController: UIViewController {
+    var lan = 0.5;
+    var lant = 0.5;
 
+    @IBAction func zoomOut(_ sender: Any) {
+        lan = lan + 0.5
+        lant = lant + 0.5
+        let x = CLLocationCoordinate2DMake(43.6532, -79.3849)
+        let y = MKCoordinateSpan(latitudeDelta: lant,longitudeDelta: lan)
+        let z = MKCoordinateRegionMake(x, y)
+        self.mpKit.setRegion(z, animated: true)
+
+    }
+    @IBAction func zoomIn(_ sender: UIButton) {
+        lan = lan - 0.5
+        lant = lant - 0.5
+        let x = CLLocationCoordinate2DMake(43.6532, -79.3849)
+        let y = MKCoordinateSpan(latitudeDelta: lant,longitudeDelta: lan)
+        let z = MKCoordinateRegionMake(x, y)
+        self.mpKit.setRegion(z, animated: true)
+
+    }
     @IBOutlet weak var mpKit: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //let x = CLLocation()
          let x = CLLocationCoordinate2DMake(43.6532, -79.3849)
-        let y = MKCoordinateSpan(latitudeDelta: 0.5,longitudeDelta: 0.5)
+        let y = MKCoordinateSpan(latitudeDelta: lant,longitudeDelta: lan)
         let z = MKCoordinateRegionMake(x, y)
         self.mpKit.setRegion(z, animated: true)
         
